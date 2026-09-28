@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Streamlit Web App",
+            "type": "shell",
+            "command": "streamlit run app.py",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Automated Tests",
+            "type": "shell",
+            "command": "python test_pipeline.py",
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "Train and Benchmark Models",
+            "type": "shell",
+            "command": "python train_models.py",
+            "problemMatcher": []
+        }
+    ]
+}

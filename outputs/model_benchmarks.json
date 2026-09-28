@@ -1,0 +1,158 @@
+{
+  "sentiment": {
+    "accuracy": 0.8571,
+    "precision": 0.898,
+    "recall": 0.8571,
+    "f1_score": 0.8587,
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        5
+      ]
+    ],
+    "classes": [
+      "Negative",
+      "Neutral",
+      "Positive"
+    ],
+    "classification_report": {
+      "Negative": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.9090909090909091,
+        "support": 6.0
+      },
+      "Neutral": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.8,
+        "support": 3.0
+      },
+      "Positive": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1-score": 0.8333333333333334,
+        "support": 5.0
+      },
+      "accuracy": 0.8571428571428571,
+      "macro avg": {
+        "precision": 0.9047619047619048,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8474747474747475,
+        "support": 14.0
+      },
+      "weighted avg": {
+        "precision": 0.8979591836734694,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8586580086580087,
+        "support": 14.0
+      }
+    },
+    "nb_accuracy": 0.7857,
+    "train_samples": 56,
+    "test_samples": 14
+  },
+  "chunking": [
+    {
+      "training_size_pct": "60%",
+      "train_samples": 55,
+      "test_samples": 38,
+      "feature_name": "full_features",
+      "feature_set": "3. Word + POS + Context + Length",
+      "accuracy": 76.32,
+      "precision": 78.82,
+      "recall": 76.32,
+      "f1_score": 76.9
+    },
+    {
+      "training_size_pct": "70%",
+      "train_samples": 65,
+      "test_samples": 28,
+      "feature_name": "full_features",
+      "feature_set": "3. Word + POS + Context + Length",
+      "accuracy": 82.14,
+      "precision": 85.2,
+      "recall": 82.14,
+      "f1_score": 82.7
+    },
+    {
+      "training_size_pct": "80%",
+      "train_samples": 74,
+      "test_samples": 19,
+      "feature_name": "full_features",
+      "feature_set": "3. Word + POS + Context + Length",
+      "accuracy": 89.47,
+      "precision": 89.47,
+      "recall": 89.47,
+      "f1_score": 89.47
+    }
+  ],
+  "wsd": {
+    "model_architecture": "Bidirectional LSTM",
+    "vocab_size": 323,
+    "training_samples": 42,
+    "validation_samples": 9,
+    "test_samples": 9,
+    "epochs": 35,
+    "final_epoch_loss": 0.0052,
+    "loss_history": [
+      1.7696,
+      1.56,
+      1.4078,
+      1.2562,
+      0.9217,
+      0.6763,
+      0.4663,
+      0.463,
+      0.3127,
+      0.1968,
+      0.1569,
+      0.0778,
+      0.059,
+      0.0372,
+      0.0292,
+      0.0136,
+      0.0146,
+      0.0086,
+      0.0092,
+      0.0095,
+      0.0086,
+      0.007,
+      0.0054,
+      0.0055,
+      0.0071,
+      0.0058,
+      0.0053,
+      0.0056,
+      0.0035,
+      0.0047,
+      0.0045,
+      0.0045,
+      0.003,
+      0.0038,
+      0.0052
+    ],
+    "training_accuracy": 100.0,
+    "validation_accuracy": 44.44,
+    "test_accuracy": 88.89,
+    "classes": [
+      "EDUCATION",
+      "FOOD",
+      "FOOD_REQUEST",
+      "LAW",
+      "PAYMENT",
+      "SEQUENCE"
+    ]
+  }
+}

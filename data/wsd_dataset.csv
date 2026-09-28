@@ -1,0 +1,61 @@
+sentence,target_word,sense
+"The main course was delicious and beautifully plated.",course,FOOD
+"We ordered soup before having the main course.",course,FOOD
+"The three course meal included salad pasta and dessert.",course,FOOD
+"For the second course the chef prepared grilled salmon.",course,FOOD
+"The dessert course was the highlight of our dining experience.",course,FOOD
+"Every course served at the banquet was prepared with fresh herbs.",course,FOOD
+"I loved the starter but the main course was slightly salty.",course,FOOD
+"They offered a five course tasting menu paired with mocktails.",course,FOOD
+"The final course consisted of artisanal cheese and fresh fruit.",course,FOOD
+"We enjoyed a delightful multi course lunch at the Italian restaurant.",course,FOOD
+"The chef changed the evening course to include seasonal pumpkin.",course,FOOD
+"Please bring out the next course whenever the table is ready.",course,FOOD
+"The appetizer and main course were both piping hot.",course,FOOD
+"I could not finish the heavy mutton course after all those starters.",course,FOOD
+"A refreshing sorbet was served as a palate cleanser between courses.",course,FOOD
+"The first course of spicy tomato soup warmed us up nicely.",course,FOOD
+"The restaurant is renowned for its signature seafood course.",course,FOOD
+"We chose the vegetarian course which featured creamy paneer.",course,FOOD
+"The waiter carefully cleared our plates after the fish course.",course,FOOD
+"The dessert course had Belgian chocolate lava cake.",course,FOOD
+"I enrolled in an online computer science course last month.",course,EDUCATION
+"The university offers an advanced data science course for graduates.",course,EDUCATION
+"She completed a professional Python programming course with distinction.",course,EDUCATION
+"The professor designed a comprehensive machine learning course.",course,EDUCATION
+"Students must register for the semester course before Friday.",course,EDUCATION
+"He attended every lecture in the natural language processing course.",course,EDUCATION
+"This certification course covers deep learning and neural networks.",course,EDUCATION
+"The college added a new artificial intelligence course to the curriculum.",course,EDUCATION
+"I need to submit my final assignment for the statistics course.",course,EDUCATION
+"The teacher explained the syllabus for the upcoming diploma course.",course,EDUCATION
+"She dropped the difficult physics course after midterms.",course,EDUCATION
+"The online learning platform has a popular web development course.",course,EDUCATION
+"You will receive a recognized certificate upon completing this course.",course,EDUCATION
+"He is studying hard for the final exam of the engineering course.",course,EDUCATION
+"The training course helped improve her technical software skills.",course,EDUCATION
+"The syllabus for the database management course is quite rigorous.",course,EDUCATION
+"Many students enrolled in the digital marketing course this summer.",course,EDUCATION
+"I joined a crash course to prepare for the university entrance test.",course,EDUCATION
+"The academic advisor recommended taking an elective course in linguistics.",course,EDUCATION
+"The college conducts a specialized robotics course every winter.",course,EDUCATION
+"The waiter brought the bill to our table after dessert.",bill,PAYMENT
+"Please check the restaurant bill for any incorrect food charges.",bill,PAYMENT
+"We split the dinner bill evenly among four friends.",bill,PAYMENT
+"I paid the restaurant bill using my credit card.",bill,PAYMENT
+"They added an unexpected service charge to the final bill.",bill,PAYMENT
+"Parliament passed the healthcare reform bill after a heated debate.",bill,LAW
+"The senator introduced a new environmental protection bill today.",bill,LAW
+"The government proposed an education finance bill in the assembly.",bill,LAW
+"The legislative bill requires unanimous approval from both houses.",bill,LAW
+"Citizens protested against the controversial taxation bill.",bill,LAW
+"We placed our food order for two wood-fired pizzas.",order,FOOD_REQUEST
+"The waiter took our dinner order with great attention to detail.",order,FOOD_REQUEST
+"I want to order spicy chicken biryani and garlic naan.",order,FOOD_REQUEST
+"Our beverage order took twenty minutes to arrive at the table.",order,FOOD_REQUEST
+"She modified her food order to request gluten-free pasta.",order,FOOD_REQUEST
+"Please arrange the customer files in alphabetical order.",order,SEQUENCE
+"The books were stacked in chronological order on the shelf.",order,SEQUENCE
+"Follow the numerical order when answering the examination questions.",order,SEQUENCE
+"Maintain proper sequential order during data processing steps.",order,SEQUENCE
+"The steps in the algorithm must be executed in strict order.",order,SEQUENCE
