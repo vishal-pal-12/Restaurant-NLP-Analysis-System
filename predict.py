@@ -116,64 +116,64 @@ def analyze_and_predict(user_input: str, df_rest, df_rev):
     # 1. Sentiment Prediction
     s_label = summary["sentiment"]
     s_conf = summary["sentiment_confidence"]
-    print(f"\n[EXP 1] PREDICTED SENTIMENT : {s_label.upper()} ({s_conf} confidence)")
+    print(f"\n[Phase-1] PREDICTED SENTIMENT : {s_label.upper()} ({s_conf} confidence)")
 
     # 2. Script Validation & Tokens
     s_valid = "VALID (English)" if summary["script_valid"] else "INVALID SCRIPT"
-    print(f"[EXP 2] SCRIPT VALIDATION   : {s_valid} | Tokens: {summary['token_count']} (Filtered: {summary['filtered_count']})")
+    print(f"[Phase-2] SCRIPT VALIDATION   : {s_valid} | Tokens: {summary['token_count']} (Filtered: {summary['filtered_count']})")
 
     # 3. Stemming & Lemmatization Root Sample
     exp3 = res["experiment_3_preprocessing"]
     sample_lemmas = [f"{t['original']}->{t['lemmatized']}" for t in exp3["comparison_table"][:4] if not t["is_stopword"]]
     if sample_lemmas:
-        print(f"[EXP 3] LEMMATIZED ROOTS    : {', '.join(sample_lemmas)}")
+        print(f"[Phase-3] LEMMATIZED ROOTS    : {', '.join(sample_lemmas)}")
 
     # 4. Morphological Expansion
     exp4 = res["experiment_4_morphology"]
     exp_query = exp4["query_expansion"]["expanded_query_string"]
     if exp_query and exp_query != text_to_process:
         preview = (exp_query[:75] + '...') if len(exp_query) > 75 else exp_query
-        print(f"[EXP 4] MORPHOLOGY EXPANSION: {preview}")
+        print(f"[Phase-4] MORPHOLOGY EXPANSION: {preview}")
 
     # 5. N-Gram Predictions
     exp5 = res["experiment_5_ngram"]
     top_bigrams = [f"'{b['ngram']}'" for b in exp5["bigrams"][:3]]
     if top_bigrams:
-        print(f"[EXP 5] TOP BIGRAMS (N-GRAM): {', '.join(top_bigrams)}")
+        print(f"[Phase-5] TOP BIGRAMS (N-GRAM): {', '.join(top_bigrams)}")
     if exp5.get("next_word_predictions"):
         next_w = [p.get("next_word", "") for p in exp5["next_word_predictions"][:3] if p.get("next_word")]
         if next_w:
-            print(f"        NEXT-WORD PREDICT   : {', '.join(next_w)}")
+            print(f"          NEXT-WORD PREDICT   : {', '.join(next_w)}")
 
     # 6. Part-of-Speech Summary
     exp6 = res["experiment_6_pos"]
     dist = exp6["category_distribution"]
     pos_str = ", ".join([f"{k}: {v}" for k, v in dist.items() if v > 0])
-    print(f"[EXP 6] POS DISTRIBUTION    : {pos_str}")
+    print(f"[Phase-6] POS DISTRIBUTION    : {pos_str}")
 
     # 7. Extracted Phrases (Chunking)
     exp7 = res["experiment_7_chunking"]
     chunk_list = [c["chunk_text"] for c in exp7["rule_based_chunks"][:4]]
     if chunk_list:
         formatted_chunks = ", ".join(['"' + str(c) + '"' for c in chunk_list])
-        print(f"[EXP 7] EXTRACTED CHUNKS    : {formatted_chunks}")
+        print(f"[Phase-7] EXTRACTED CHUNKS    : {formatted_chunks}")
 
     # 8. Named Entities
     exp8 = res["experiment_8_ner"]
     ent_list = [f"{e['entity']} ({e['type']})" for e in exp8["entities"]]
     if ent_list:
-        print(f"[EXP 8] NAMED ENTITIES (NER): {', '.join(ent_list)}")
+        print(f"[Phase-8] NAMED ENTITIES (NER): {', '.join(ent_list)}")
 
     # 9. Top Matching Recommendations (Cosine Similarity)
     exp9 = res["experiment_9_similarity"]
-    print(f"[EXP 9] TOP RECOMMENDATIONS :")
+    print(f"[Phase-9] TOP RECOMMENDATIONS :")
     for r in exp9["restaurant_matches"][:3]:
-        print(f"        #{r['rank']} {r['restaurant_name']:<22} (Match: {r['similarity_percentage']:>6}) | {r['cuisine']} | {r['location']}")
+        print(f"          #{r['rank']} {r['restaurant_name']:<22} (Match: {r['similarity_percentage']:>6}) | {r['cuisine']} | {r['location']}")
 
     # 10. Word Sense Disambiguation
     exp10 = res["experiment_10_wsd"]
-    print(f"[EXP 10] WSD NEURAL PREDICT : Target '{exp10['target_word']}' -> Sense: {exp10['predicted_sense']} ({exp10['confidence']}%)")
-    print(f"         Context Meaning    : {exp10['sense_meaning']}")
+    print(f"[Phase-10] WSD NEURAL PREDICT : Target '{exp10['target_word']}' -> Sense: {exp10['predicted_sense']} ({exp10['confidence']}%)")
+    print(f"           Context Meaning    : {exp10['sense_meaning']}")
 
     print("-" * 76 + "\n")
 
