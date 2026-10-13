@@ -324,11 +324,12 @@ The system operates autonomously using 3 locally curated domain datasets:
 
 ## 19. SCREENSHOTS & VISUAL INTERFACE
 
-The web dashboard is organized into 4 distinct views:
-1. **🚀 Complete NLP Pipeline:** Single-click end-to-end execution showing all 10 modules in interactive cards.
-2. **🧪 Individual Experiments (1–10):** Diagnostic tabs allowing custom testing of each module.
-3. **📊 Datasets & Benchmark Metrics:** Data viewer, class distribution bar charts, and training loss plots.
-4. **📑 College Project Report:** Full built-in 24-section report with one-click `.md` download.
+The web application (`app.py`) features a high-performance, attractive modern UI (Google Inter typography, linear gradient hero banners, target showcase cards, animated hover recommendation cards, match percentage badges, and phase pills) organized into 5 dedicated navigation modes:
+1. **🍽️ Restaurant Predictor & 10-Phase NLP Analysis:** Interactive dropdown covering all 35 catalog venues + live search by name, dish, ID, or keyword; target venue showcase card; top semantic recommendations with match tags; and 9 structured linguistic inspection tabs (`.phase-badge`).
+2. **🔍 Custom Query / Review Search Pipeline:** Quick-selection chips and live text query analysis across the entire end-to-end NLP pipeline.
+3. **🔬 NLP 10-Phase Interactive Laboratory:** 10 isolated diagnostic workbenches allowing independent testing and interactive inspection of each NLP phase (Sentiment, Tokenization, Morphology, N-gram, POS, Chunking, NER, Similarity, Bi-LSTM WSD).
+4. **📊 Restaurant Catalog & Datasets:** Interactive data explorer for all 35 restaurants, 70 labeled customer reviews (with sentiment bar charts), and 60 WSD neural disambiguation contexts.
+5. **📑 Formal Project Report (24 Sections):** Comprehensive academic technical report with in-browser viewing and one-click Markdown file download.
 
 *(Saved plots generated during benchmark execution: `outputs/confusion_matrix.png`, `outputs/chunking_training_size_curve.png`, `outputs/wsd_loss_curve.png`)*
 
